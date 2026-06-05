@@ -18,7 +18,7 @@ jobs:
   # Deploy
     sudo apt-get install cowsay -y
     echo $PATH
-export PATH="$PATH:/usr/games:/usr/local/games"
-cat advice.message | cowsay -f $(ls /usr/share/cowsay/cows | shuf -n 1)
+    export PATH="$PATH:/usr/games:/usr/local/games"
+    cat advice.message | cowsay -f $(ls /usr/share/cowsay/cows | shuf -n 1)
     
   
