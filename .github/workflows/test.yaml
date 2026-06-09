@@ -1,0 +1,31 @@
+name: Test | vs |-
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Pipe
+        run: |
+          cat > file1.txt << 'EOF'
+          Hello
+          World
+          EOF
+
+      - name: Pipe Dash
+        run: |-
+          cat > file2.txt << 'EOF'
+          Hello
+          World
+          EOF
+
+      - name: Compare
+        run: |
+          echo "file1:"
+          wc -c file1.txt
+
+          echo "file2:"
+          wc -c file2.txt
