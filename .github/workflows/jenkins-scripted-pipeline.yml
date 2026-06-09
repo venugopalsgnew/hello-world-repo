@@ -19,5 +19,6 @@ jobs:
 
   Results:
     runs-on: ubuntu-latest
+    needs: Build
     steps:
     - run: echo "Job completed at $(date)"
